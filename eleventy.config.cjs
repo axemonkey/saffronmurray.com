@@ -1,5 +1,6 @@
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('saffronmurray.com/public');
+	eleventyConfig.addPassthroughCopy({ 'saffronmurray.com/robots.txt': '/robots.txt' });
 	eleventyConfig.setUseGitIgnore(false);
 	eleventyConfig.setServerOptions({
 		// liveReload: false,
