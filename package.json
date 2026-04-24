@@ -45,7 +45,7 @@
     "eslint-plugin-unicorn": "28.0.2",
     "npm-run-all2": "^7.0.1",
     "onchange": "7.1.0",
-    "postcss": "8.4.31",
+    "postcss": "8.5.10",
     "postcss-csso": "6.0.1",
     "postcss-custom-properties": "12.1.11",
     "postcss-scss": "4.0.6",
