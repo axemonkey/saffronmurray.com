@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "saffronmurray-dot-com",
   "version": "0.4.0",
   "private": "true",
@@ -60,4 +61,48 @@
     "svgo": "3.3.4",
     "util": "0.12.5"
   }
+=======
+	"name": "saffronmurray-dot-com",
+	"version": "0.4.0",
+	"private": "true",
+	"scripts": {
+		"start": "npx @11ty/eleventy --input=./src --serve",
+		"build": "npm-run-all prettier build:assets build:images",
+		"build:assets": "npx sn-assets-pipeline build",
+		"build:images": "node tooling/process-images.js",
+		"dev": "npm run build && npm-run-all --parallel start watch",
+		"prettier": "npx prettier . -w",
+		"watch": "npm-run-all --parallel watch:assets watch:images",
+		"watch:assets": "npx sn-assets-pipeline watch",
+		"watch:images": "onchange './src/assets/images/**/*' -- npm run build:images"
+	},
+	"author": "Clive Murray <clive+murray@clivemurray.com>",
+	"license": "UNLICENSED",
+	"type": "module",
+	"browserslist": [
+		">0.3%, last 5 versions, not dead"
+	],
+	"engines": {
+		"node": "24.20.0"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^3.1.6",
+		"@eslint/js": "^10.0.1",
+		"@springernature/assets-pipeline": "^0.3.1",
+		"eslint": "^10.4.0",
+		"eslint-plugin-import-x": "^4.16.2",
+		"eslint-plugin-no-use-extend-native": "^0.7.3",
+		"eslint-plugin-promise": "^7.2.1",
+		"eslint-plugin-unicorn": "^74.0.0",
+		"globals": "^17.6.0",
+		"npm-run-all2": "^9.0.3",
+		"onchange": "^7.1.0",
+		"prettier": "^3.9.6",
+		"sharp": "^0.35.4",
+		"stylelint": "^17.12.0",
+		"stylelint-config-recommended-scss": "^17.0.1",
+		"stylelint-order": "^8.1.1",
+		"svgo": "^4.0.1"
+	}
+>>>>>>> 3c8300d (update to be the same as sl)
 }

@@ -8,13 +8,14 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="generator" content="{{ eleventy.generator }}">
 
-	<link rel="stylesheet" type="text/css" href="/public/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/{{assets.style.css}}">
 </head>
 
 <body>
 
 	{{ content | safe }}
 
+	<script type="module" src="/public/js/{{assets.main.js}}"></script>
 </body>
 
 </html>
